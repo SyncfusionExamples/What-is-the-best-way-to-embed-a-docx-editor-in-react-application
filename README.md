@@ -1,6 +1,40 @@
 # Embed a DOCX Editor in React Application
 This repository contains example how to seamlessly embed the powerful Syncfusion® DOCX Editor into a React application. It showcases rich Word document (DOCX) editing and rendering directly within the browser, entirely free from Microsoft Word or Office interop dependencies.
 
+# How to run the application
+
+1.  **Clone the repository** to your local machine.
+
+2.  **Install Dependencies**
+    Install the required npm packages for the project.
+    ```bash
+    npm install
+    ```
+
+3.  **Run the Web Service**
+    The Syncfusion Document Editor requires a server-side backend for processing Word documents. You can run the web service from either of the following sources:
+    *   **GitHub Source:** Clone and run the [ASP.NET Core Web Service example](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services).
+    *   **Docker Image:** Use the pre-built [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+
+    Once your web service is running, update the `serviceUrl` property in `src/App.tsx` to point to its endpoint.
+
+    ```typescript
+    // In src/App.tsx
+    <DocumentEditorContainerComponent 
+        serviceUrl="http://localhost:62869/api/documenteditor/" 
+        height={'100vh'}
+        enableToolbar={true} 
+    />
+    ```
+
+4.  **Run the Application**
+    Start the React development server.
+    ```bash
+    npm start
+    ```
+    This will open the application in your default web browser, typically at `http://localhost:3000`.
+
+
   # Resources 
 
 - **Product page:**   [Syncfusion® React Word Processor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) 
